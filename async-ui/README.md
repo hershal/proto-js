@@ -1,5 +1,7 @@
 # Asynchronous User Interfaces
 
+![Asyncronous User Interfaces Example](http://i.imgur.com/5sWDqLT.gif)
+
 This is my attempt at mimicking the iOS-style KVO-based MVC through JavaScript's
 EventEmitter. We have *n* models which each have *m* tasks. Each task updates
 the Model's ViewController when it's completed. The ViewController then redraws
