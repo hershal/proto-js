@@ -7,6 +7,8 @@ const ModelViewController = require('./model-view-controller').ModelViewControll
 
 const numViewControllers = 10;
 const numTasks = 100;
+const updateFrequency = 100;    /* milliseconds */
+const operationQueueParallelism = 100;
 
 let viewControllers = [];
 
@@ -20,9 +22,9 @@ setInterval(() => {
     str += viewControllers[i].toString() + '\n';
   }
   logUpdate(str);
-}, 100);
+}, updateFrequency);
 
-let queue = new OperationQueue(20);
+let queue = new OperationQueue(operationQueueParallelism);
 
 for (let i=0; i<numViewControllers; ++i) {
   viewControllers[i].model.addOperations(queue);
