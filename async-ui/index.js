@@ -26,9 +26,9 @@ setInterval(() => {
 
 let queue = new OperationQueue(operationQueueParallelism, {randomize: true});
 
-for (let i=0; i<numViewControllers; ++i) {
-  viewControllers[i].model.addOperations(queue);
-}
+viewControllers.forEach((vc) => {
+  vc.model.addOperations(queue);
+});
 
 queue.start().then(() => {
   setTimeout(() => process.exit(0), 100);
