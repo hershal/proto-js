@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "adjustable-operation-queue": "^0.4.0",
+    "adjustable-operation-queue": "^0.5.0",
     "clui": "^0.3.1",
     "intelli-espower-loader": "^1.0.1",
     "log-update": "^1.0.2",

@@ -24,7 +24,7 @@ setInterval(() => {
   logUpdate(str);
 }, updateFrequency);
 
-let queue = new OperationQueue(operationQueueParallelism);
+let queue = new OperationQueue(operationQueueParallelism, {randomize: true});
 
 for (let i=0; i<numViewControllers; ++i) {
   viewControllers[i].model.addOperations(queue);
